@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Faculty Weekly Timetable</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #eaf4ff, #f8fbff);
+        min-height: 100vh;
+        padding: 40px 20px;
+        color: #1f2937;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        overflow-x: auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: #17365d;
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #64748b;
+        margin-bottom: 28px;
+        font-size: 16px;
+    }
+
+    table {
+        width: 100%;
+        min-width: 1100px;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    th {
+        background: linear-gradient(135deg, #17365d, #2f75b5);
+        color: white;
+        padding: 18px 12px;
+        font-size: 16px;
+        border: 1px solid #dbe5ef;
+    }
+
+    td {
+        padding: 16px 10px;
+        text-align: center;
+        border: 1px solid #dbe5ef;
+        font-size: 15px;
+        min-height: 55px;
+    }
+
+    .faculty {
+        font-weight: bold;
+        text-align: left;
+        padding-left: 18px;
+    }
+
+    .vrutik {
+        background: #ddebF7;
+    }
+
+    .kamal {
+        background: #e2f0d9;
+    }
+
+    .jagrav {
+        background: #fff2cc;
+    }
+
+    .yash {
+        background: #fce4d6;
+    }
+
+    .time {
+        background: #f7fbff;
+        font-weight: 500;
+    }
+
+    .empty {
+        background: #ffffff;
+    }
+
+    tr:hover td {
+        background: #eef7ff;
+        transition: 0.2s;
+    }
+
+    .legend {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-top: 25px;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .dot-vrutik { background: #ddebF7; }
+    .dot-kamal { background: #e2f0d9; }
+    .dot-jagrav { background: #fff2cc; }
+    .dot-yash { background: #fce4d6; }
+
+    @media (max-width: 768px) {
+        body {
+            padding: 15px;
+        }
+
+        .container {
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        td, th {
+            padding: 12px 8px;
+            font-size: 13px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>FACULTY WEEKLY TIMETABLE</h1>
+
+    <p class="subtitle">
+        Weekly Class Schedule • Faculty-wise Timings
+    </p>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Faculty Name</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- Vrutik Sir -->
+            <tr>
+                <td class="faculty vrutik">Vrutik Sir</td>
+
+                <td class="time">10:00 AM – 12:00 PM</td>
+                <td class="time">10:00 AM – 12:00 PM</td>
+                <td class="time">10:00 AM – 12:00 PM</td>
+                <td class="time">10:00 AM – 12:00 PM</td>
+                <td class="empty"></td>
+                <td class="empty"></td>
+                <td class="empty"></td>
+            </tr>
+
+            <!-- Kamal Mam -->
+            <tr>
+                <td class="faculty kamal">Kamal Mam</td>
+
+                <td class="time">12:00 PM – 3:00 PM</td>
+                <td class="time">12:00 PM – 2:00 PM</td>
+                <td class="time">12:00 PM – 3:00 PM</td>
+                <td class="empty"></td>
+                <td class="time">12:00 PM – 3:00 PM</td>
+                <td class="empty"></td>
+                <td class="empty"></td>
+            </tr>
+
+            <!-- Jagrav Sir -->
+            <tr>
+                <td class="faculty jagrav">Jagrav Sir</td>
+
+                <td class="time">5:30 PM – 7:00 PM</td>
+                <td class="time">3:00 PM – 5:00 PM</td>
+                <td class="time">5:00 PM – 7:00 PM</td>
+                <td class="empty"></td>
+                <td class="time">2:00 PM – 4:00 PM</td>
+                <td class="time">1:00 PM – 4:00 PM</td>
+                <td class="time">3:00 PM – 5:00 PM</td>
+            </tr>
+
+            <!-- Yash Sir -->
+            <tr>
+                <td class="faculty yash">Yash Sir</td>
+
+                <td class="time">3:00 PM – 5:00 PM</td>
+                <td class="time">2:00 PM – 3:00 PM</td>
+                <td class="time">4:00 PM – 5:00 PM</td>
+                <td class="empty"></td>
+                <td class="time">4:00 PM – 5:00 PM</td>
+                <td class="time">4:00 PM – 6:00 PM</td>
+                <td class="empty"></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="legend">
+
+        <div class="legend-item">
+            <span class="dot dot-vrutik"></span>
+            Vrutik Sir
+        </div>
+
+        <div class="legend-item">
+            <span class="dot dot-kamal"></span>
+            Kamal Mam
+        </div>
+
+        <div class="legend-item">
+            <span class="dot dot-jagrav"></span>
+            Jagrav Sir
+        </div>
+
+        <div class="legend-item">
+            <span class="dot dot-yash"></span>
+            Yash Sir
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+```

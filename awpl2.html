@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWPL - Login & Business Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: #0b6623; /* AWPL ग्रीन थीम */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        /* Container Design */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        /* Welcome Section */
+        .welcome-box {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .welcome-box h2 {
+            color: #0b6623;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .welcome-box p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Login Form Card */
+        .login-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-card h3 {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #0b6623;
+            outline: none;
+            box-shadow: 0 0 5px rgba(11, 102, 35, 0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #0b6623;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #084d1a;
+        }
+
+        .forgot-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #0b6623;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>AWPL Portal</h1>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Welcome text on left -->
+        <div class="welcome-box">
+            <h2>Asclepius Wellness</h2>
+            <p>स्वास्थ्य, धन और खुशी (Health, Wealth, Happiness) के सफर में आपका स्वागत है। हमारे बेहतरीन आयुर्वेदिक और वैलनेस उत्पादों के साथ अपनी जीवनशैली को एक नई दिशा दें।</p>
+            <p>अपना डायरेक्ट सेलर (DS) अकाउंट लॉग इन करें और अपने डैशबोर्ड, डाउनलाइन और सेल्स रिपोर्ट्स को आसानी से मैनेज करें।</p>
+        </div>
+
+        <!-- Login Form on right -->
+        <div class="login-card">
+            <h3>डायरेक्ट सेलर लॉग इन</h3>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="username">यूज़रनेम / DS ID</label>
+                    <input type="text" id="username" placeholder="अपनी ID दर्ज करें" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">पासवर्ड</label>
+                    <input type="password" id="password" placeholder="अपना पासवर्ड दर्ज करें" required>
+                </div>
+
+                <button type="submit" class="login-btn">लॉग इन करें</button>
+                <a href="#" class="forgot-link">पासवर्ड भूल गए?</a>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Asclepius Wellness Private Limited | सभी अधिकार सुरक्षित हैं।</p>
+    </footer>
+
+</body>
+</html>

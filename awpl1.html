@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>App Lock</title>
+<style>
+body{
+font-family:Arial;
+background:#222;
+color:white;
+text-align:center;
+margin-top:100px;
+}
+input{
+padding:10px;
+font-size:20px;
+}
+button{
+padding:10px 20px;
+font-size:20px;
+margin-top:10px;
+}
+</style>
+</head>
+<body>
+
+<h2>🔒 App Lock</h2>
+
+<input type="password" id="pin" placeholder="Enter PIN">
+<br>
+<button onclick="unlock()">Unlock</button>
+
+<p id="msg"></p>
+
+<script>
+function unlock(){
+let pin=document.getElementById("pin").value;
+if(pin=="1234"){
+document.getElementById("msg").innerHTML="✅ Unlocked!";
+}else{
+document.getElementById("msg").innerHTML="❌ Wrong PIN!";
+}
+}
+</script>
+
+</body>
+</html>

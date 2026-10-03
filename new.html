@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Document</title>
+    <style>
+        .box{
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+        button{
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Hello Javascript</h1>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <button onclick="findById()">Get Element By Id</button>
+    <button onclick="queryFirst()"> query selector</button>
+    <button onclick="queryAll()"> query selector all</button>
+    <button onclick="changeText()">change text</button>
+    <button onclick="changeHTML()">change html</button>
+    <button onclick="changeCSS()">change css</button>
+    <button onclick="createElement()">Create Element</button>
+    <button onclick="removeElement()">Remove element</button>
+    <div id="output"></div>
+    <script>
+        // 1. Find Element by Id
+        function findById() {
+            const element = document.getElementById("title")
+            element.textContent = "Element Found By ID";
+        }
+
+        // 2. Find first matching element
+        function queryFirst() {
+            const element = document.querySelector(".box")
+            element.textContent = "First Box Selected";
+        }
+
+        // 3.Find all matching elements
+        function queryAll() {
+            const elements = document.querySelectorAll(".box");
+            elements.forEach(function(element) {
+                element.textContent = "All Boxes Selected";
+            });
+        }
+
+        // 4. Change Text
+        function changeText() {
+            const element = document.getElementById("title");
+            element.textContent = "New Text";
+        }
+
+        // 5. Change HTML
+        function changeHTML() {
+            const element = document.getElementById("title")
+            element.innerHTML = "<b>Hello DOM!</b>";
+        }
+
+        // 6. Change CSS
+        function changeCSS() {
+            const element = document.getElementById("title")
+            element.style.color = "red";
+            element.style.backgroundColor = "yellow";
+            element.style.padding = "10px";
+        }
+
+        // 7.Create an element
+        function createElement() {
+    
+            const p = document.createElement("p");
+            p.textContent = "This paragraph was created using DOM.";
+            document.getElementById("output").appendChild(p);
+        }
+
+        // 8. Remove an element
+        function removeElement() {
+            const element = document.getElementById("title");
+            element.remove();
+        }
+    </script>
+</body>
+</html>
